@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if title %}{{ title }} | {% endif %}Volaré - Espanhol para Aviação</title>
+    <meta name="description" content="{{ description | default('Aprenda espanhol técnico para aviação com a professora especializada. Curso online para comissários de bordo e ground staff.') }}">
+    
+    <!-- Debug output -->
+    <!-- 
+    Metadata URL: {{ metadata.url }}
+    Page URL: {{ page.url }}
+    -->
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ page.url | url }}">
+    <meta property="og:title" content="{% if title %}{{ title }} | {% endif %}Volaré - Espanhol para Aviação">
+    <meta property="og:description" content="{{ description | default('Aprenda espanhol técnico para aviação com a professora especializada. Curso online para comissários de bordo e ground staff.') }}">
+    <meta property="og:image" content="{{ ogImage | default('/assets/images/og-image.jpg') | url }}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ page.url | url }}">
+    <meta property="twitter:title" content="{% if title %}{{ title }} | {% endif %}Volaré - Espanhol para Aviação">
+    <meta property="twitter:description" content="{{ description | default('Aprenda espanhol técnico para aviação com a professora especializada. Curso online para comissários de bordo e ground staff.') }}">
+    <meta property="twitter:image" content="{{ ogImage | default('/assets/images/og-image.jpg') | url }}">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+
+    <!-- Analytics -->
+    <script defer data-domain="meuespanholaviacao.com" src="https://plausible.io/js/script.js"></script>
+</head>
+<body class="min-h-screen flex flex-col">
+    {% include "partials/header.njk" %}
+    
+    <main class="flex-grow">
+        {% block content %}{% endblock %}
+    </main>
+
+    {% include "partials/footer.njk" %}
+
+    <!-- Alpine.js -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script type="module" src="/assets/js/main.js"></script>
+</body>
+</html> 
