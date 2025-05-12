@@ -1,11 +1,16 @@
 import { eleventyImagePlugin } from "@11ty/eleventy-img";
 import eleventyPluginRss from "@11ty/eleventy-plugin-rss";
 import { format } from "date-fns";
+import vitePlugin from "@11ty/eleventy-plugin-vite";
+
 
 export default function(eleventyConfig) {
+    
   // Debug: Log plugin loading
   console.log("Loading Eleventy plugins...");
   
+  eleventyConfig.addPlugin(vitePlugin);
+
   // Add a Nunjucks date filter FIRST
   eleventyConfig.addNunjucksFilter("date", function(date, formatStr) {
     if(date === "now") date = new Date();
