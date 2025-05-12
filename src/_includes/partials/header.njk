@@ -1,49 +1,67 @@
-<header class="bg-white shadow-sm sticky top-0 z-50">
+<header class="bg-white shadow-sm sticky top-0 z-50" x-data="{ mobileMenuOpen: false }">
     <nav class="container py-4">
         <div class="flex items-center justify-between">
             <!-- Logo -->
             <a href="/" class="flex items-center space-x-2">
                 <img src="/assets/images/logo.svg" alt="Volaré Logo" class="h-8 w-auto">
-                <span class="text-xl font-display font-bold text-gray-900">Volaré</span>
+                <span class="text-xl font-display font-bold text-primary-600">Volaré</span>
             </a>
 
             <!-- Desktop Navigation -->
             <div class="hidden md:flex items-center space-x-8">
-                <a href="#sobre" class="text-gray-600 hover:text-gray-900 transition-colors">Sobre</a>
-                <a href="#curso" class="text-gray-600 hover:text-gray-900 transition-colors">Curso</a>
-                <a href="#depoimentos" class="text-gray-600 hover:text-gray-900 transition-colors">Depoimentos</a>
-                <a href="#faq" class="text-gray-600 hover:text-gray-900 transition-colors">FAQ</a>
-                <a href="#contato" class="btn bg-primary-600 text-white hover:bg-primary-700">
-                    Comece Agora
-                </a>
+                <a href="#sobre" class="text-gray-600 hover:text-primary-600 transition-colors">Sobre</a>
+                <a href="#curso" class="text-gray-600 hover:text-primary-600 transition-colors">Curso</a>
+                <a href="#depoimentos" class="text-gray-600 hover:text-primary-600 transition-colors">Depoimentos</a>
+                <a href="#faq" class="text-gray-600 hover:text-primary-600 transition-colors">FAQ</a>
+                <a href="#contato" class="btn-primary">Matricule-se</a>
             </div>
 
             <!-- Mobile Menu Button -->
-            <button class="md:hidden text-gray-600 hover:text-gray-900" id="mobile-menu-button">
-                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <button 
+                @click="mobileMenuOpen = !mobileMenuOpen"
+                class="md:hidden p-2 rounded-lg text-gray-600 hover:bg-gray-100"
+                :aria-expanded="mobileMenuOpen"
+                aria-label="Menu"
+            >
+                <svg 
+                    class="h-6 w-6" 
+                    :class="{ 'hidden': mobileMenuOpen, 'block': !mobileMenuOpen }"
+                    fill="none" 
+                    viewBox="0 0 24 24" 
+                    stroke="currentColor"
+                >
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+                <svg 
+                    class="h-6 w-6" 
+                    :class="{ 'block': mobileMenuOpen, 'hidden': !mobileMenuOpen }"
+                    fill="none" 
+                    viewBox="0 0 24 24" 
+                    stroke="currentColor"
+                >
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
             </button>
         </div>
 
         <!-- Mobile Menu -->
-        <div class="md:hidden hidden" id="mobile-menu">
-            <div class="pt-4 pb-3 space-y-3">
-                <a href="#sobre" class="block text-gray-600 hover:text-gray-900 transition-colors">Sobre</a>
-                <a href="#curso" class="block text-gray-600 hover:text-gray-900 transition-colors">Curso</a>
-                <a href="#depoimentos" class="block text-gray-600 hover:text-gray-900 transition-colors">Depoimentos</a>
-                <a href="#faq" class="block text-gray-600 hover:text-gray-900 transition-colors">FAQ</a>
-                <a href="#contato" class="btn bg-primary-600 text-white hover:bg-primary-700 w-full justify-center">
-                    Comece Agora
-                </a>
+        <div 
+            x-show="mobileMenuOpen"
+            x-transition:enter="transition ease-out duration-200"
+            x-transition:enter-start="opacity-0 -translate-y-1"
+            x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-150"
+            x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 -translate-y-1"
+            class="md:hidden absolute left-0 right-0 mt-2 bg-white shadow-lg rounded-lg py-2"
+        >
+            <div class="px-4 space-y-1">
+                <a href="#sobre" class="block py-2 text-gray-600 hover:text-primary-600 transition-colors">Sobre</a>
+                <a href="#curso" class="block py-2 text-gray-600 hover:text-primary-600 transition-colors">Curso</a>
+                <a href="#depoimentos" class="block py-2 text-gray-600 hover:text-primary-600 transition-colors">Depoimentos</a>
+                <a href="#faq" class="block py-2 text-gray-600 hover:text-primary-600 transition-colors">FAQ</a>
+                <a href="#contato" class="block py-2 btn-primary w-full text-center">Matricule-se</a>
             </div>
         </div>
     </nav>
-</header>
-
-<script>
-    document.getElementById('mobile-menu-button').addEventListener('click', function() {
-        const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenu.classList.toggle('hidden');
-    });
-</script> 
+</header> 
