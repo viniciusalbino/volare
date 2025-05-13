@@ -5,6 +5,10 @@ const QuemSouSection = () => {
     return (
       <section id="quem-sou" className="bg-white py-16">
         <div className="container-section">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-quila text-gray-900 mb-4 relative inline-block pb-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-1/2 after:h-0.5 after:bg-gradient-to-r after:from-cielo after:to-rosado">Quem Sou Eu</h2>
+          </div>
+
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
             <div className="w-full md:w-1/2 animate-slide-up">
               <img 
@@ -15,7 +19,6 @@ const QuemSouSection = () => {
             </div>
             
             <div className="w-full md:w-1/2 animate-fade-in-delay-1">
-              <h2 className="text-3xl md:text-4xl font-quila text-cielo mb-6">Quem Sou Eu</h2>
               <div className="text-lg text-gray-700 space-y-4">
                 <p>
                   ¡Hola! Soy Stephanie — pero pode me chamar de Sté.

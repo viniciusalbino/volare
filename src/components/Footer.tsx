@@ -22,7 +22,7 @@ const Footer = () => {
                 <Instagram size={18} />
               </a>
               <a 
-                href="mailto:contato@volare.com.br" 
+                href="mailto:cheprofe.br@gmail.com" 
                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
                 aria-label="Email"
               >
@@ -30,7 +30,7 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          
+           
           {/* Links Rápidos */}
           <div>
             <h3 className="text-xl font-quila mb-6 relative inline-block pb-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-1/2 after:h-0.5 after:bg-gradient-to-r after:from-cielo after:to-rosado">Links Rápidos</h3>
@@ -46,13 +46,16 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          
+           
           {/* Contato */}
           <div>
             <h3 className="text-xl font-quila mb-6 relative inline-block pb-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-1/2 after:h-0.5 after:bg-gradient-to-r after:from-cielo after:to-rosado">Contato</h3>
             <ul className="space-y-3">
               <li>
-                <a href="mailto:contato@volare.com.br" className="text-white/80 hover:text-white transition-colors">contato@volare.com.br</a>
+                <a href="mailto:cheprofe.br@gmail.com" className="text-white/80 hover:text-white transition-colors">cheprofe.br@gmail.com</a>
+              </li>
+              <li>
+                <a href="https://wa.me/5511977722531" className="text-white/80 hover:text-white transition-colors">+55 11 97772-2531</a>
               </li>
               <li>
                 <a href="https://instagram.com/che.profe" className="text-white/80 hover:text-white transition-colors">@che.profe</a>
@@ -60,7 +63,7 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        
+
         <div className="pt-6 border-t border-white/10 text-center">
           <p className="text-white/60 text-sm">© {new Date().getFullYear()} Volaré. Todos os direitos reservados.</p>
         </div>

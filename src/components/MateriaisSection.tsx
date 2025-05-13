@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 
 const MateriaisSection = () => {
@@ -35,10 +34,9 @@ const MateriaisSection = () => {
   return (
     <section id="materiais" className="bg-plata py-16">
       <div className="container-section">
-        <h2 className="text-3xl md:text-4xl font-quila text-gray-800 text-center mb-4 animate-slide-up">Materiais</h2>
-        
-        <div className="flex justify-center mb-12">
-          <div className="h-1 w-24 bg-gradient-to-r from-cielo via-rosado to-girasol rounded-full animate-pulse-subtle"></div>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-quila text-gray-900 mb-4 relative inline-block pb-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-1/2 after:h-0.5 after:bg-gradient-to-r after:from-cielo after:to-rosado">Materiais</h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">Conteúdo exclusivo para acelerar seu aprendizado em espanhol para aviação</p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

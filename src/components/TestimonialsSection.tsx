@@ -39,8 +39,8 @@ const TestimonialsSection = () => {
 
   return (
     <section id="depoimentos" className="bg-plata py-16">
-      <div className="container-section animate-slide-up">
-        <h2 className="text-3xl md:text-4xl font-quila text-cielo text-center mb-12">Depoimentos</h2>
+      <div className="text-center mb-12">
+      <h2 className="text-3xl font-quila text-gray-900 mb-4 relative inline-block pb-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-1/2 after:h-0.5 after:bg-gradient-to-r after:from-cielo after:to-rosado">Depoimentos</h2>
         
         <div className="max-w-3xl mx-auto relative">
           <div className="overflow-hidden">
