@@ -1,61 +1,45 @@
-# Volaré - Espanhol para Aviação
+# Volare - Espanhol para Comissárias de Bordo
 
-Landing page para o curso de espanhol especializado em aviação civil, focado em comissários de bordo e ground staff.
+Landing page moderna e minimalista para cursos de espanhol especializados para comissárias de bordo.
 
 ## 🚀 Tecnologias
 
 - HTML5
-- Tailwind CSS (via CDN)
-- Alpine.js (via CDN)
-- Plausible Analytics
+- CSS3 (Flexbox + Grid)
+- JavaScript Vanilla
+- Design Mobile First
+- Otimizado para SEO
 
-## 🛠️ Desenvolvimento Local
+## 🎨 Design System
 
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/seu-usuario/volare-web.git
-   cd volare-web
-   ```
+### Cores
+- Cielo: #e62c27
+- Rosado: #f495d3
+- Naranja: #e62c27
+- Girasol: #ff8c4d
+- Plata: #f4f3f2
+- Carbon: #ff8c4d
 
-2. Inicie um servidor local:
-   ```bash
-   # Usando Python
-   python -m http.server 8000
-   
-   # OU usando Node.js
-   npx serve
-   
-   # OU usando PHP
-   php -S localhost:8000
-   ```
+### Tipografia
+- Headings: Quila (custom)
+- Corpo: System UI / Inter
 
-3. Acesse `http://localhost:8000` no navegador
+## 📱 Responsividade
 
-## 📝 Estrutura
+- Mobile: < 768px
+- Tablet: ≥ 768px
+- Desktop: ≥ 1024px
 
-```
-volare-web/
-├── index.html          # Landing page principal
-├── sobre.html          # Página sobre a instrutora
-└── assets/
-    ├── img/           # Imagens e ícones
-    │   └── favicon.svg
-    └── js/
-        └── main.js    # Scripts Alpine.js
-```
+## 🛠️ Desenvolvimento
 
-## 🎨 Design
-
-- Paleta de cores personalizada `volare-*` baseada no azul institucional
-- Tipografia: sistema (sans-serif)
-- Layout responsivo (mobile-first)
-- Componentes interativos com Alpine.js
-
-## 📊 Analytics
-
-- Plausible Analytics (privacidade-first)
-- Domínio: meuespanholaviacao.com
+1. Clone o repositório
+2. Abra `index.html` em seu navegador
+3. Para desenvolvimento, use um servidor local (ex: Live Server)
 
 ## 📄 Licença
 
-© 2024 Volaré Educação · Todos os direitos reservados
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+## 👩‍🏫 Sobre
+
+Volare é uma plataforma especializada em ensinar espanhol para comissárias de bordo, oferecendo cursos personalizados e materiais didáticos específicos para a área.
