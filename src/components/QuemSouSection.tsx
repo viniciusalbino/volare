@@ -12,7 +12,7 @@ const QuemSouSection = () => {
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
             <div className="w-full md:w-1/2 animate-slide-up">
               <img 
-                src="/professora.jpg" 
+                src="/src/assets/professora.jpg" 
                 alt="Professora de Espanhol para Comissárias" 
                 className="rounded-xl shadow-lg w-full h-auto hover-lift"
               />
