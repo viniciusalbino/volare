@@ -1,5 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import professora from '@/assets/images/professora.jpg';
 
 const QuemSouSection = () => {
     return (
@@ -12,9 +13,9 @@ const QuemSouSection = () => {
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-16">
             <div className="w-full md:w-1/2 animate-slide-up">
               <img 
-                src="/src/assets/professora.jpg" 
-                alt="Professora de Espanhol para Comissárias" 
-                className="rounded-xl shadow-lg w-full h-auto hover-lift"
+                src={professora}
+                alt="Professora"
+                className="w-full h-full object-cover rounded-lg shadow-lg"
               />
             </div>
             

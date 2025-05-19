@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, MessageCircle } from 'lucide-react';
+import logo from '@/assets/images/logo.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,8 +33,8 @@ const Header = () => {
           <div className="flex items-center justify-between">
             <a href="#" className="flex items-center">
               <img 
-                src="/src/assets/logo.png" 
-                alt="Volaré Logo" 
+                src={logo}
+                alt="Volare Logo"
                 className={`w-auto transition-all duration-300 ${isScrolled ? 'h-16' : 'h-32'}`}
               />
             </a>

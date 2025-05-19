@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import airplane from '@/assets/images/airplane.svg';
 
 const HeroSection = () => {
   const titleRef = useRef<HTMLHeadingElement>(null);
@@ -8,8 +9,9 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-[90vh] flex items-center bg-gradient-to-br from-plata to-white">
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute right-0 bottom-0 w-full h-full md:w-1/2 md:h-3/4 bg-contain bg-no-repeat bg-right-bottom animate-float" 
-             style={{backgroundImage: "url('/src/assets/airplane.svg')"}}></div>
+        <div 
+          className="absolute inset-0 bg-no-repeat bg-center bg-contain opacity-10"
+          style={{backgroundImage: `url(${airplane})`}}></div>
       </div>
       <div className="container-section relative z-10 pt-20">
         <div className="md:w-3/5 lg:w-1/2 animate-slide-in">
