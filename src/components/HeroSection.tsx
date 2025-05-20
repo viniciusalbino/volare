@@ -7,29 +7,33 @@ const HeroSection = () => {
   const ctaRef = useRef<HTMLDivElement>(null);
 
   return (
-    <section className="relative min-h-[90vh] flex items-center bg-gradient-to-br from-plata to-white">
-      <div className="absolute inset-0 overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-no-repeat bg-center bg-contain opacity-10"
-          style={{backgroundImage: `url(${airplane})`}}></div>
-      </div>
-      <div className="container-section relative z-10 pt-20">
-        <div className="md:w-3/5 lg:w-1/2 animate-slide-in">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-quila text-cielo mb-4">
-            Espanhol para Comissárias de Bordo
-          </h1>
-        </div>
-        
-        <div className="md:w-3/5 lg:w-1/2 animate-fade-in-delay-1">
-          <h2 className="text-xl md:text-2xl text-gray-700 mb-8">
-            Aprenda espanhol especializado para atingir seus objetivos profissionais
-          </h2>
-        </div>
-        
-        <div className="animate-fade-in-delay-2">
-          <a href="#planos" className="btn-primary inline-block">
-            Quero Aprender Agora
-          </a>
+    <section className="relative min-h-screen flex items-center bg-gradient-to-br from-cielo/10 to-rosado/10">
+      <div className="container-section relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <div className="text-center lg:text-left animate-fade-in">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-quila text-gray-900 mb-6">
+              Aprenda Espanhol para <span className="text-cielo">Aviação</span>
+            </h1>
+            <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto lg:mx-0">
+              Domine o espanhol necessário para sua carreira na aviação com aulas personalizadas e materiais exclusivos.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <a href="#planos" className="btn-primary">
+                Começar Agora
+              </a>
+              <a href="#materiais" className="btn-secondary">
+                Conhecer Materiais
+              </a>
+            </div>
+          </div>
+          
+          <div className="relative h-[300px] lg:h-[500px] animate-fade-up">
+            <img 
+              src={airplane} 
+              alt="Avião decorativo" 
+              className="absolute right-0 w-full h-full object-contain opacity-80"
+            />
+          </div>
         </div>
       </div>
     </section>
